@@ -1,0 +1,12 @@
+name: crystal-app
+version: 0.1.0
+
+authors:
+  - Alex <ua.quetzalcoatl@gmail.com>
+
+license: MIT
+
+dependencies:
+  kemal:
+    github: sdogruyol/kemal
+    branch: master
