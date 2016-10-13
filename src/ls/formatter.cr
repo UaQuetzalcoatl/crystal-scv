@@ -1,15 +1,17 @@
 require "csv"
 
+require "./column"
+
 class Ls::Formatter
 
-  def initialize(@Localizer : Ls::Localizer, @columns : Array(String))
+  def initialize(@localizer : Localizer, @columns : Array(Column))
   end
   
-  def format(stream : IO,)
+  def format(stream : IO)
     CSV.each_row(stream) do |row|
       arr = [] of String
       row.each_index do |index|
-        arr << localizer.default(row[index]).to_s
+        arr << @localizer.default(row[index]).to_s
       end
 
     yield arr
