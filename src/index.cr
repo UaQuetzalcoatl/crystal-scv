@@ -41,7 +41,7 @@ ws "/" do |socket|
     #     socket.close
     #     break
     #   end
-      
+
     #   localizer = Ls::Localizer.new(job.locale)
     #   formatter = Ls::Formatter.new(localizer, job.columns)
 
